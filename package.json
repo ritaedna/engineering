@@ -1,0 +1,24 @@
+{
+  "name": "engineering",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ritaedna/engineering.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ritaedna/engineering/issues"
+  },
+  "homepage": "https://github.com/ritaedna/engineering#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemailer": "^7.0.10"
+  }
+}
