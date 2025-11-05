@@ -180,15 +180,14 @@
         <p class="small">Office hours: Mon — Fri, 8:00 — 17:00</p>
       </div>
 
-      <!-- Contact Form -->
-      <form id="contact-form" action="/contact" method="POST">
-        <input type="text" id="name" name="name" placeholder="Your Name" required>
-        <input type="email" id="email" name="email" placeholder="Your Email" required>
-        <input type="text" id="subject" name="subject" placeholder="Subject" required>
-        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn btn-primary">Send Message</button>
-        <p id="form-status"></p>
-      </form>
+      <form name="contact" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="contact">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
     </div>
   </div>
 </section>

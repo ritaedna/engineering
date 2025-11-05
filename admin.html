@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+  <h1>Admin Dashboard</h1>
+  <p id="status">Loading...</p>
+  <button id="login">Log in</button>
+  <button id="logout" style="display:none;">Log out</button>
+
+  <script>
+    const identity = window.netlifyIdentity;
+
+    identity.on('init', user => updateUI(user));
+    identity.on('login', user => { updateUI(user); identity.close(); });
+    identity.on('logout', () => updateUI(null));
+
+    document.getElementById('login').addEventListener('click', () => identity.open());
+    document.getElementById('logout').addEventListener('click', () => identity.logout());
+
+    function updateUI(user) {
+      const status = document.getElementById('status');
+      const loginBtn = document.getElementById('login');
+      const logoutBtn = document.getElementById('logout');
+
+      if(user){
+        status.textContent = `Logged in as ${user.email}`;
+        loginBtn.style.display = 'none';
+        logoutBtn.style.display = 'inline';
+      } else {
+        status.textContent = 'Not logged in';
+        loginBtn.style.display = 'inline';
+        logoutBtn.style.display = 'none';
+      }
+    }
+
+    identity.init();
+  </script>
+</body>
+</html>

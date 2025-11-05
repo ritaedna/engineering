@@ -443,3 +443,67 @@ h1, h2, h3 {
   border-top: 1px solid #444;
   padding-top: 15px;
 }
+/* Contact Form Styles */
+form[name="contact"] {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+form[name="contact"] h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+form[name="contact"] input,
+form[name="contact"] textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+form[name="contact"] input:focus,
+form[name="contact"] textarea:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+  outline: none;
+}
+
+form[name="contact"] textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+form[name="contact"] button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form[name="contact"] button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  form[name="contact"] {
+    padding: 20px;
+  }
+}
